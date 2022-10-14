@@ -1,22 +1,18 @@
-# pull the base image
-FROM node:alpine
-
-# set the working direction
 WORKDIR /app
 
 # add app
-COPY . ./
+
 
 # install app dependencies
-COPY package.json ./
+COPY package*.json ./
 
-RUN npm install --only=prod
+RUN npm install
 
-ENV NODE_ENV production
+COPY . .
 
 EXPOSE 3001
 
 COPY . .
 
 # start app
-CMD ["npm", "run","start"]
+CMD ["npm","start"]
