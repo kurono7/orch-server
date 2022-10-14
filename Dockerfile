@@ -1,3 +1,7 @@
+# pull the base image
+FROM node:alpine
+
+# set the working direction
 WORKDIR /app
 
 # add app
@@ -12,7 +16,5 @@ COPY . .
 
 EXPOSE 3001
 
-COPY . .
-
 # start app
-CMD ["npm","start"]
+CMD ["npm", "start"]
