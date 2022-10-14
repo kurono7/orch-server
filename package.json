@@ -8,7 +8,7 @@
     "certs": "./scripts/create-certs.sh",
     "dev": "nodemon -L",
     "local": "cp local.env .env && nodemon -L",
-    "start": "node ./dist/server.js",
+    "start": "tsc && node ./dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
